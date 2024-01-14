@@ -7,7 +7,17 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint"
+    "lint": "eslint . --ext .ts,.vue,.js --fix"
+  },
+  "lint-staged": {
+    "*.{js,vue,ts}": [
+      "pnpm lint"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -18,6 +28,8 @@
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-e2e-cypress": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
