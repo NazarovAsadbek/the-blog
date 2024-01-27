@@ -8,7 +8,7 @@
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "eslint . --ext .ts,.vue,.js --fix"
-  },
+},
   "lint-staged": {
     "*.{js,vue,ts}": [
       "pnpm lint"
@@ -30,6 +30,7 @@
     "@babel/eslint-parser": "^7.12.16",
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-e2e-cypress": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
@@ -41,12 +42,17 @@
     "@vue/vue3-jest": "^27.0.0-alpha.1",
     "babel-jest": "^27.0.6",
     "cypress": "^8.3.0",
-    "eslint": "^7.32.0",
+    "eslint": "^8.56.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-vue": "^8.0.3",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-vue": "^9.20.1",
     "husky": "^8.0.3",
     "jest": "^27.0.5",
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "typescript": "^5.3.3"
   }
 }
