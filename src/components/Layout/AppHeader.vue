@@ -12,9 +12,7 @@
           <router-link active-class="active" to="/about">Заметки</router-link>
         </li>
         <li>
-          <AppTheme
-            style="width: 25px; max-width: 25px; position: absolute"
-          ></AppTheme>
+          <AppTheme class="app-header__menu-theme"></AppTheme>
         </li>
       </ul>
     </div>
@@ -77,7 +75,11 @@ export default {
   padding: 0;
   margin: 0;
 }
-
+.app-header__menu-theme {
+  width: 25px;
+  max-width: 25px;
+  position: absolute;
+}
 .app-header__menu li {
   cursor: pointer;
   margin-left: 30px;
