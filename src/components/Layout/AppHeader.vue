@@ -12,8 +12,9 @@
           <router-link active-class="active" to="/about">Заметки</router-link>
         </li>
         <li>
-          <LightThemeIcon v-show="!isDark" @click="toggleTheme" />
-          <DarkThemeIcon v-show="isDark" @click="toggleTheme" />
+          <AppTheme
+            style="width: 25px; max-width: 25px; position: absolute"
+          ></AppTheme>
         </li>
       </ul>
     </div>
@@ -22,11 +23,9 @@
 
 <script>
 import AppLogo from "@/components/Common/AppLogo.vue";
-import LightThemeIcon from "@/components/Common/Theme/LightThemeIcon.vue";
-import DarkThemeIcon from "@/components/Common/Theme/DarkThemeIcon.vue";
-
+import AppTheme from "@/components/Common/Theme/AppTheme.vue";
 export default {
-  components: { DarkThemeIcon, LightThemeIcon, AppLogo },
+  components: { AppTheme, AppLogo },
   data() {
     return {
       activeTheme: "light",
@@ -73,6 +72,7 @@ export default {
   margin-inline-end: 0;
   padding-inline-start: 40px;
   display: flex;
+  align-items: flex-start;
   list-style: none;
   padding: 0;
   margin: 0;
