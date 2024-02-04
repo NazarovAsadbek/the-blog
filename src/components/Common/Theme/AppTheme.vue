@@ -4,16 +4,25 @@ import DarkThemeIcon from "@/components/Common/Theme/DarkThemeIcon.vue";
 export default {
   components: { DarkThemeIcon, LightThemeIcon },
   data() {
-    return { isDark: false };
+    return {
+      isDark: false,
+    };
   },
   methods: {
     toggleTheme() {
       this.isDark = !this.isDark;
-      localStorage.setItem("IS_DARK_THEME", JSON.stringify(!this.isDark));
+    },
+    setThemeToLocalStorage() {
+      localStorage.setItem("IS_DARK_THEME", this.isDark);
     },
   },
   mounted() {
     this.isDark = JSON.parse(localStorage.getItem("IS_DARK_THEME")) ?? false;
+
+    window.addEventListener("beforeunload", this.setThemeToLocalStorage);
+  },
+  beforeUnmount() {
+    window.removeEventListener("beforeunload", this.setThemeToLocalStorage);
   },
 };
 </script>
