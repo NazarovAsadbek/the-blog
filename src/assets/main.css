@@ -6,3 +6,26 @@ html, body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+:root {
+    --app-background-color: #f7f8f8;
+    --app-link-color: #0a3465
+}
+
+.wrapper.dark {
+    --app-background-color: #0e141b;
+    --app-link-color: #6c94e8
+}
+
+.wrapper {
+    min-height: 100vh;
+    background-color: var(--app-background-color);
+    transition: background-color ease-out 0.3s;
+}
+
+.container{
+    width: 100%;
+    max-width: 1025px;
+    margin: 0 auto;
+}
+

@@ -1,5 +1,13 @@
 <template>
-  <h1>HomeView</h1>
+  <section>
+    <wide-post />
+  </section>
 </template>
 
-<script></script>
+<script>
+import WidePost from "@/components/Posts/WidePost.vue";
+
+export default {
+  components: { WidePost },
+};
+</script>

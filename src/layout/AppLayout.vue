@@ -1,7 +1,11 @@
 <template>
   <div class="wrapper">
     <AppHeader />
-    <router-view />
+    <div class="container">
+      <main>
+        <router-view />
+      </main>
+    </div>
   </div>
 </template>
 
