@@ -11,6 +11,8 @@ export default {
   methods: {
     toggleTheme() {
       this.isDark = !this.isDark;
+      const appWrapper = document.querySelector(".wrapper");
+      appWrapper.classList.toggle("dark");
     },
     setThemeToLocalStorage() {
       localStorage.setItem("IS_DARK_THEME", this.isDark);
@@ -18,7 +20,10 @@ export default {
   },
   mounted() {
     this.isDark = JSON.parse(localStorage.getItem("IS_DARK_THEME")) ?? false;
-
+    const appWrapper = document.querySelector(".wrapper");
+    if (this.isDark) {
+      appWrapper.classList.add("dark");
+    }
     window.addEventListener("beforeunload", this.setThemeToLocalStorage);
   },
   beforeUnmount() {
