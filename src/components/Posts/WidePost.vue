@@ -53,20 +53,21 @@
   display: flex;
   height: 350px;
   box-sizing: border-box;
-  border: 1px solid #f4f3f3;
+  border: 1px;
   border-radius: 15px;
   transition: border 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
     transform 0.15s ease-in-out;
   cursor: pointer;
   margin-bottom: 40px;
-  background-color: #fff;
+  background-color: var(--app-main);
+  color: var(--app-main);
 }
 
 .post:hover {
   transform: translateY(-3px);
   box-shadow: 0 50px 50px -20px rgba(50, 50, 93, 0.03),
     0 30px 10px -30px rgba(0, 0, 0, 0.06);
-  border: 1px solid #eae8e8;
+  border: 1px solid;
 }
 
 .post:hover .post-image .post-image__wrapper img:last-of-type {
@@ -139,6 +140,7 @@
 .post-info__tag {
   display: inline-block;
   text-transform: capitalize;
+  color: var(--app-main-info-tag);
 }
 
 i {
@@ -155,9 +157,9 @@ i {
   font-weight: 800;
   margin-top: 15px;
   margin-bottom: 10px;
-  color: #000;
   font-size: 32px;
   line-height: 40px;
+  color: var(--app-main-title);
 }
 
 .post-info__description {
@@ -165,6 +167,6 @@ i {
   font-family: Inter, system-ui, Helvetica Neue, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 24px;
-  color: #000;
+  color: var(--app-main-description);
 }
 </style>
