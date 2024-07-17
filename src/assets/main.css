@@ -24,7 +24,8 @@ html, body {
     --app-main-info-tag: #000000;
     --app-header-menu-text:#0a3465;
     --app-background-color: #f7f8f8;
-    --app-link-color: #0a3465
+    --app-link-color: #0a3465;
+    --app-border-color: #eae8e8;
 }
 
 .wrapper.dark {
@@ -34,7 +35,8 @@ html, body {
     --app-main-info-tag: #ffffff;
     --app-header-menu-text:#c2c2c2;
     --app-background-color: #0e141b;
-    --app-link-color: #6c94e8
+    --app-link-color: #6c94e8;
+    --app-border-color: transparent
 }
 
 .wrapper {

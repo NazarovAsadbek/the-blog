@@ -1,12 +1,6 @@
 <template>
   <router-link class="animate" to="/">
     <article class="post column">
-      <div class="post-image">
-        <div class="post-image__wrapper visible">
-          <img src="https://archakov.im/uploads/1666519086820.jpg" alt="post" />
-          <img src="https://archakov.im/uploads/1666519086820.jpg" alt="post" />
-        </div>
-      </div>
       <div class="post-info">
         <div class="post-info__tag">
           <i style="background-color: #edd950"></i>
@@ -72,66 +66,6 @@
 
 .post:hover .post-image .post-image__wrapper img:last-of-type {
   opacity: 0.35;
-}
-
-@keyframes post-image-loader {
-  0% {
-    background-color: rgba(0, 0, 0, 0.07);
-  }
-  50% {
-    background-color: rgba(0, 0, 0, 0.11);
-  }
-  100% {
-    background-color: rgba(0, 0, 0, 0.07);
-  }
-}
-
-.post-image {
-  width: 100%;
-  height: 260px;
-  border-radius: 15px 15px 0 0;
-  min-height: 260px;
-  text-align: center;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.07);
-  animation: post-image-loader 1s linear infinite;
-}
-
-.post-image__wrapper {
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.post-image__wrapper img {
-  border-radius: 15px 15px 0 0;
-}
-
-.post-image__wrapper img:first-of-type {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: relative;
-  z-index: 1;
-  border-radius: 15px 15px 0 0;
-}
-
-.post-image__wrapper img:last-of-type {
-  transition: all 0.15s ease-in-out;
-  width: 95%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  left: 49%;
-  top: 10px;
-  transform: translateX(-50%);
-  filter: blur(25px) saturate(12);
-  opacity: 0;
-}
-
-.post-image__wrapper.visible {
-  opacity: 1;
 }
 
 .post-info {
