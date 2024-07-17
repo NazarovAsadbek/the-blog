@@ -1,23 +1,16 @@
 <template>
   <router-link class="animate" to="/">
-    <article class="post">
-      <div class="post-image">
-        <div class="post-image__wrapper visible">
-          <img src="https://archakov.im/uploads/1666542894623.jpg" alt="post" />
-          <img src="https://archakov.im/uploads/1666542894623.jpg" alt="post" />
-        </div>
-      </div>
+    <article class="post column">
       <div class="post-info">
         <div class="post-info__tag">
-          <i></i>
-          работа
+          <i style="background-color: #edd950"></i>
+          JavaScript
         </div>
         <h2 class="post-info__title">
-          История о том, как наш новый тимлид нифига не зная стал тимлидом
+          Как с помощью Dadata определить город по IP?
         </h2>
         <p class="post-info__description">
-          В этой статье я расскажу про боль, с которой я столкнулся за последние
-          несколько дней. История о том, как в на...
+          Делюсь информацией о том, как определить местоположение по IP
         </p>
       </div>
     </article>
@@ -51,90 +44,33 @@
 
 .post {
   display: flex;
-  height: 350px;
   box-sizing: border-box;
   border: 1px;
   border-radius: 15px;
   transition: border 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
     transform 0.15s ease-in-out;
   cursor: pointer;
-  margin-bottom: 40px;
   background-color: var(--app-main);
   color: var(--app-main);
+  flex-direction: column;
+  height: auto;
+  margin-bottom: 0;
 }
 
 .post:hover {
   transform: translateY(-3px);
   box-shadow: 0 50px 50px -20px rgba(50, 50, 93, 0.03),
     0 30px 10px -30px rgba(0, 0, 0, 0.06);
-  border: 1px solid;
+  border: 1px solid var(--app-border-color);
 }
 
 .post:hover .post-image .post-image__wrapper img:last-of-type {
   opacity: 0.35;
 }
 
-@keyframes post-image-loader {
-  0% {
-    background-color: rgba(0, 0, 0, 0.07);
-  }
-  50% {
-    background-color: rgba(0, 0, 0, 0.11);
-  }
-  100% {
-    background-color: rgba(0, 0, 0, 0.07);
-  }
-}
-
-.post-image {
-  width: 480px;
-  border-radius: 15px 0 0 15px;
-  min-height: 260px;
-  text-align: center;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.07);
-  animation: post-image-loader 1s linear infinite;
-}
-
-.post-image__wrapper {
-  width: 480px;
-  height: 100%;
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.post-image__wrapper img:first-of-type {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: relative;
-  z-index: 1;
-  border-radius: 15px 0 0 15px;
-}
-
-.post-image__wrapper img:last-of-type {
-  transition: all 0.15s ease-in-out;
-  width: 95%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  left: 49%;
-  top: 10px;
-  transform: translateX(-50%);
-  filter: blur(25px) saturate(12);
-  opacity: 0;
-}
-
-.post-image__wrapper.visible {
-  opacity: 1;
-}
-
 .post-info {
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 40px;
+  padding: 25px 30px 30px;
 }
 
 .post-info__tag {
@@ -155,10 +91,10 @@ i {
 
 .post-info__title {
   font-weight: 800;
+  font-size: 25px;
   margin-top: 15px;
   margin-bottom: 10px;
-  font-size: 32px;
-  line-height: 40px;
+  line-height: 34px;
   color: var(--app-main-title);
 }
 

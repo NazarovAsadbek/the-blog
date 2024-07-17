@@ -8,14 +8,35 @@ html, body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/*
+1. Найти цвета темный темы и светлой на сайте archakov.dev
+2. Это создать переменный для светлой темы внутри :root свойства, например --app-light: #ffffff
+3. Это создать переменный для темной темы внутри .wrapper.dark свойства --app-darken-1: #192028
+4. Перейти в компонент WidePost.vue
+5. Воспользоваться вот таким синтексисом: background-color: var(--app-darken-1);
+6. Название цветом можно подобрать тут https://vuetifyjs.com/en/styles/colors/#material-colors
+*/
+
 :root {
+    --app-main: #ffffff;
+    --app-main-title: #000000;
+    --app-main-description: #000000;
+    --app-main-info-tag: #000000;
+    --app-header-menu-text:#0a3465;
     --app-background-color: #f7f8f8;
-    --app-link-color: #0a3465
+    --app-link-color: #0a3465;
+    --app-border-color: #eae8e8;
 }
 
 .wrapper.dark {
+    --app-main: #192028;
+    --app-main-title: #F0F4F9;
+    --app-main-description: #ffffff;
+    --app-main-info-tag: #ffffff;
+    --app-header-menu-text:#c2c2c2;
     --app-background-color: #0e141b;
-    --app-link-color: #6c94e8
+    --app-link-color: #6c94e8;
+    --app-border-color: transparent
 }
 
 .wrapper {

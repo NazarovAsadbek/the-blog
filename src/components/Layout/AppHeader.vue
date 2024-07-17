@@ -86,7 +86,7 @@ export default {
 }
 
 .app-header__menu li a {
-  color: #0a3465;
+  color: var(--app-header-menu-text);
   opacity: 0.5;
   letter-spacing: 0.3px;
 }
