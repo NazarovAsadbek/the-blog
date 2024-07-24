@@ -1,30 +1,39 @@
 <template>
-  <router-link class="animate" to="/">
+  <router-link class="animate" :to="{ name: 'post', params: { name: slug } }">
     <article class="post">
       <div class="post-image">
         <div class="post-image__wrapper visible">
-          <img src="https://archakov.im/uploads/1666542894623.jpg" alt="post" />
-          <img src="https://archakov.im/uploads/1666542894623.jpg" alt="post" />
+          <img :src="img" alt="post" />
+          <img :src="img" alt="post" />
         </div>
       </div>
       <div class="post-info">
         <div class="post-info__tag">
           <i></i>
-          работа
+          {{ category }}
         </div>
         <h2 class="post-info__title">
-          История о том, как наш новый тимлид нифига не зная стал тимлидом
+          {{ title }}
         </h2>
         <p class="post-info__description">
-          В этой статье я расскажу про боль, с которой я столкнулся за последние
-          несколько дней. История о том, как в на...
+          {{ description }}
         </p>
       </div>
     </article>
   </router-link>
 </template>
 
-<script></script>
+<script>
+export default {
+  props: {
+    img: String,
+    category: String,
+    title: String,
+    description: String,
+    slug: String,
+  },
+};
+</script>
 
 <style lang="css" scoped>
 @keyframes animate-in {
@@ -41,7 +50,7 @@
 }
 
 .animate {
-  display: inline-block;
+  display: block;
   opacity: 0;
   visibility: hidden;
   transform: translateY(15px);
@@ -160,6 +169,7 @@ i {
   font-size: 32px;
   line-height: 40px;
   color: var(--app-main-title);
+  word-break: break-all;
 }
 
 .post-info__description {
@@ -168,5 +178,6 @@ i {
   font-size: 16px;
   line-height: 24px;
   color: var(--app-main-description);
+  word-break: break-all;
 }
 </style>

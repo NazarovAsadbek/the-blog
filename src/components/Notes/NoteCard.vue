@@ -1,5 +1,5 @@
 <template>
-  <router-link class="animate" to="/">
+  <router-link class="animate" to="/post/1234">
     <article class="post column">
       <div class="post-info">
         <div class="post-info__tag">
