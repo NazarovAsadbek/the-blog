@@ -8,7 +8,7 @@
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "eslint . --ext .ts,.vue,.js --fix"
-},
+  },
   "lint-staged": {
     "*.{js,vue,ts}": [
       "pnpm lint"
@@ -23,7 +23,9 @@
     "core-js": "^3.8.3",
     "register-service-worker": "^1.7.2",
     "vue": "^3.2.13",
-    "vue-router": "^4.0.3"
+    "vue-markdown-render": "^2.2.1",
+    "vue-router": "^4.0.3",
+    "vue3-highlightjs": "^1.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

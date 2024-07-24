@@ -1,29 +1,39 @@
 <template>
-  <router-link class="animate" to="/">
+  <router-link class="animate" :to="{ name: 'post', params: { name: slug } }">
     <article class="post column">
       <div class="post-image">
         <div class="post-image__wrapper visible">
-          <img src="https://archakov.im/uploads/1666519086820.jpg" alt="post" />
-          <img src="https://archakov.im/uploads/1666519086820.jpg" alt="post" />
+          <img :src="img" alt="post" />
+          <img :src="img" alt="post" />
         </div>
       </div>
       <div class="post-info">
         <div class="post-info__tag">
           <i style="background-color: #edd950"></i>
-          JavaScript
+          {{ category }}
         </div>
         <h2 class="post-info__title">
-          Как с помощью Dadata определить город по IP?
+          {{ title }}
         </h2>
         <p class="post-info__description">
-          Делюсь информацией о том, как определить местоположение по IP
+          {{ description }}
         </p>
       </div>
     </article>
   </router-link>
 </template>
 
-<script></script>
+<script>
+export default {
+  props: {
+    img: String,
+    category: String,
+    title: String,
+    description: String,
+    slug: String,
+  },
+};
+</script>
 
 <style lang="css" scoped>
 @keyframes animate-in {
@@ -162,6 +172,7 @@ i {
   margin-bottom: 10px;
   line-height: 34px;
   color: var(--app-main-title);
+  word-break: break-all;
 }
 
 .post-info__description {
@@ -170,5 +181,6 @@ i {
   font-size: 16px;
   line-height: 24px;
   color: var(--app-main-description);
+  word-break: break-all;
 }
 </style>
